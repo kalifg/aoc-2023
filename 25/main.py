@@ -55,10 +55,6 @@ def main(filename: str):
     print(f'Graph size: {len(nodes)} nodes')
     print(f'Graph size: {len(edges)} edges')
     print()
-    # print_graph(nodes)
-    # print()
-    # print(graph_groups(nodes))
-    # print()
 
     false_cuts = 0
     minimum_cut = math.inf
@@ -70,7 +66,6 @@ def main(filename: str):
 
         nodes, node_index, edges = process_lines(lines)
         karger(nodes, edges)
-        # print_graph(nodes)
         potential_cut = [edge.name for edge in edges]
 
         print(f'Cuts: {len(potential_cut)}')
@@ -97,10 +92,6 @@ def main(filename: str):
             print(f'Minimum cut was {minimum_cut}')
             print(f'False cuts: {false_cuts}')
             break
-
-    # print(graph_edges)
-    # print(len(removed_edges), removed_edges)
-    # print(graph_groups(graph))
 
 
 def graph_groups(graph: set[Node]):
